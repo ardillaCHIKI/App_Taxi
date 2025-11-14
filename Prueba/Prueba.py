@@ -7,8 +7,8 @@ root.title("Mi primera ventana")
 root.geometry("400x300")
 # evitar que la ventana se pueda redimensionar (width, height) */
 root.resizable(False, False)
-
-root.iconbitmap("icono.ico")
+# establecer un icono para la ventana */
+root.iconbitmap("Taxi_Right_Yellow_26335.ico")
 
 
 
