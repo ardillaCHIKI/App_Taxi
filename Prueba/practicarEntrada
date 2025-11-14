@@ -1,4 +1,3 @@
-
 from tkinter import *
 
 root = Tk()
@@ -8,21 +7,41 @@ miFrame.pack()
 
 cuadroNombre = Entry(miFrame)
 cuadroNombre.grid(row=0, column=1, padx=10, pady=10)
+cuadroNombre.config(fg="red", justify="center")
+# contraseña
+cuadroPass = Entry(miFrame)
+cuadroPass.grid(row=1, column=1, padx=10, pady=10)
+cuadroPass.config(fg="red", justify="center")
+cuadroPass.config(show="*")
 
 cuadroApellidos = Entry(miFrame)
-cuadroApellidos.grid(row=1, column=1, padx=10, pady=10)
+cuadroApellidos.grid(row=2, column=1, padx=10, pady=10)
 
 cuadroDir = Entry(miFrame)
-cuadroDir.grid(row=2, column=1, padx=10, pady=10)
+cuadroDir.grid(row=3, column=1, padx=10, pady=10)
 
 nombreLabel = Label(miFrame, text="Nombre:")
-nombreLabel.grid(row=0, column=0, padx=10, pady=10)
+nombreLabel.grid(row=0, column=0, padx=10, pady=10, sticky="e")
+
+passLabel = Label(miFrame, text="Contraseña:")
+passLabel.grid(row=1, column=0, padx=10, pady=10, sticky="e")
 
 apellidosLabel = Label(miFrame, text="Apellidos:")
-apellidosLabel.grid(row=1, column=0, padx=10, pady=10)
+apellidosLabel.grid(row=2, column=0, padx=10, pady=10, sticky="e")
 
-dirLabel = Label(miFrame, text="Direccion:")
-dirLabel.grid(row=2, column=0, padx=10, pady=10)
+dirLabel = Label(miFrame, text="Direccion de casa:")
+dirLabel.grid(row=3, column=0, padx=10, pady=10, sticky="e")
+
+# la ubicación del texto dentro del cuadro de entrada se hace con 'sticky'
+# y usando los puntos cardinales
+# N - norte
+# S - sur
+# E - este
+# W - oeste
+# nw - noroeste
+# ne - noreste
+# sw - suroeste
+# se - sureste
 
 
 
