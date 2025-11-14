@@ -19,6 +19,15 @@ cuadroApellidos.grid(row=2, column=1, padx=10, pady=10)
 
 cuadroDir = Entry(miFrame)
 cuadroDir.grid(row=3, column=1, padx=10, pady=10)
+# cuadro de texto para comentarios
+textoComentario = Text(miFrame, width=27, height=15)
+textoComentario.grid(row=4, column=1, padx=10, pady=10)
+
+scrollVert = Scrollbar(miFrame, command=textoComentario.yview)
+scrollVert.grid(row=4, column=2, sticky="ns")
+# asociar el scrollbar con el cuadro de texto
+textoComentario.config(yscrollcommand=scrollVert.set)
+
 
 nombreLabel = Label(miFrame, text="Nombre:")
 nombreLabel.grid(row=0, column=0, padx=10, pady=10, sticky="e")
@@ -29,7 +38,7 @@ passLabel.grid(row=1, column=0, padx=10, pady=10, sticky="e")
 apellidosLabel = Label(miFrame, text="Apellidos:")
 apellidosLabel.grid(row=2, column=0, padx=10, pady=10, sticky="e")
 
-dirLabel = Label(miFrame, text="Direccion de casa:")
+dirLabel = Label(miFrame, text="Direccion:")
 dirLabel.grid(row=3, column=0, padx=10, pady=10, sticky="e")
 
 # la ubicación del texto dentro del cuadro de entrada se hace con 'sticky'
@@ -43,8 +52,7 @@ dirLabel.grid(row=3, column=0, padx=10, pady=10, sticky="e")
 # sw - suroeste
 # se - sureste
 
-
-
-
+comentarioLabel = Label(miFrame, text="Comentarios:")
+comentarioLabel.grid(row=4, column=0, padx=10, pady=10, sticky="e")
 
 root.mainloop()
